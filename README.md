@@ -24,4 +24,6 @@ npm start
 ## Test Data
 
 For verifying agent behaviour with transactions - 
+```
  npm run tx <Transaction_Hash>
+``
