@@ -26,7 +26,7 @@ function provideHandleTransaction(amountThreshold) {
         InstTransfer.args.value.toString()
       ).dividedBy(10 ** INST_DECIMALS)
 
-      if (amount.isLessThan(amountThreshold)) return;
+      if (amount.isLessThan(amountThreshold)) return findings;
 
       const formattedAmount = amount.toFixed(2);
       findings.push(

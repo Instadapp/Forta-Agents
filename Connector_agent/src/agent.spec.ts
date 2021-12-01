@@ -112,7 +112,7 @@ describe('Detect Instadapp Connector Contract Event', () => {
           description: `Instadapp ADDED Connector Event is detected.`,
           alertId: 'INSTADAPP-16',
           protocol: 'INSTADAPP',
-          type: FindingType.Unknown,
+          type: FindingType.Info,
           severity: FindingSeverity.Info,
         }),
       ])
@@ -137,7 +137,7 @@ describe('Detect Instadapp Connector Contract Event', () => {
           description: `Instadapp UPDATED Connector Event is detected.`,
           alertId: 'INSTADAPP-16',
           protocol: 'INSTADAPP',
-          type: FindingType.Unknown,
+          type: FindingType.Info,
           severity: FindingSeverity.Info,
         }),
       ])
@@ -162,7 +162,7 @@ describe('Detect Instadapp Connector Contract Event', () => {
           description: `Instadapp REMOVED Connector Event is detected.`,
           alertId: 'INSTADAPP-16',
           protocol: 'INSTADAPP',
-          type: FindingType.Unknown,
+          type: FindingType.Info,
           severity: FindingSeverity.Info,
         }),
       ])

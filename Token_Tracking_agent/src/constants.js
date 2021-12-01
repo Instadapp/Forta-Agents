@@ -19,8 +19,8 @@ function token(name, address, decimals) {
 }
 
 var tokens = [
-  new token("USDC", USDC_ADDRESS, USDC_DECIMALS),
-  new token("DAI", DAI_ADDRESS, DAI_DECIMALS)
+  new token("DAI", DAI_ADDRESS, DAI_DECIMALS),
+  new token("USDC", USDC_ADDRESS, USDC_DECIMALS)
 ]
 
 

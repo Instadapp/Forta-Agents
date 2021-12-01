@@ -44,7 +44,7 @@ const handleTransaction: HandleTransaction = async (
           description: `Instadapp ${sig} Connector Event is detected.`,
           alertId: 'INSTADAPP-16',
           protocol: 'INSTADAPP',
-          type: FindingType.Unknown,
+          type: FindingType.Info,
           severity: FindingSeverity.Info,
         })
       )

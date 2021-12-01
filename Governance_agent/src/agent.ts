@@ -37,7 +37,7 @@ const handleTransaction: HandleTransaction = async (
           description: `Instadapp ${sig} Proposal Event is detected.`,
           alertId: 'Instadapp-12',
           protocol: 'Instadapp',
-          type: FindingType.Unknown,
+          type: FindingType.Info,
           severity: FindingSeverity.Info,
         })
       )

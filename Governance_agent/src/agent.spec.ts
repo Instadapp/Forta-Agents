@@ -110,7 +110,7 @@ describe('Detect Instadapp Governance Event', () => {
           description: `Instadapp QUEUE Proposal Event is detected.`,
           alertId: 'Instadapp-12',
           protocol: 'Instadapp',
-          type: FindingType.Unknown,
+          type: FindingType.Info,
           severity: FindingSeverity.Info,
         }),
       ])
@@ -135,7 +135,7 @@ describe('Detect Instadapp Governance Event', () => {
           description: `Instadapp EXECUTE Proposal Event is detected.`,
           alertId: 'Instadapp-12',
           protocol: 'Instadapp',
-          type: FindingType.Unknown,
+          type: FindingType.Info,
           severity: FindingSeverity.Info,
         }),
       ])
@@ -160,7 +160,7 @@ describe('Detect Instadapp Governance Event', () => {
           description: `Instadapp CANCEL Proposal Event is detected.`,
           alertId: 'Instadapp-12',
           protocol: 'Instadapp',
-          type: FindingType.Unknown,
+          type: FindingType.Info,
           severity: FindingSeverity.Info,
         }),
       ])

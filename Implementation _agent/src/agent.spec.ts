@@ -110,7 +110,7 @@ describe('Detect Instadapp Implementation Contract Event', () => {
           description: `Instadapp SETDEFAULT Implementation Event is detected.`,
           alertId: 'Instadapp-14',
           protocol: 'Instadapp',
-          type: FindingType.Unknown,
+          type: FindingType.Info,
           severity: FindingSeverity.Info,
         }),
       ])
@@ -135,7 +135,7 @@ describe('Detect Instadapp Implementation Contract Event', () => {
           description: `Instadapp ADD Implementation Event is detected.`,
           alertId: 'Instadapp-14',
           protocol: 'Instadapp',
-          type: FindingType.Unknown,
+          type: FindingType.Info,
           severity: FindingSeverity.Info,
         }),
       ])
@@ -160,7 +160,7 @@ describe('Detect Instadapp Implementation Contract Event', () => {
           description: `Instadapp REMOVE Implementation Event is detected.`,
           alertId: 'Instadapp-14',
           protocol: 'Instadapp',
-          type: FindingType.Unknown,
+          type: FindingType.Info,
           severity: FindingSeverity.Info,
         }),
       ])
