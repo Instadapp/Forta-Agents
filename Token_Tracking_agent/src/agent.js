@@ -41,14 +41,35 @@ function provideHandleTransaction(amountThreshold) {
         const to = tokenTransfer.args.to;
         const from = tokenTransfer.args.from;
 
+
         const from_account = await instaList.accountID(from)
         const to_account = await instaList.accountID(to)
 
         const from_account_id = from_account.toNumber();
         const to_account_id = to_account.toNumber();
 
-        // Not a dsa address if account_id is 0
-        if (from_account_id == 0 && to_account_id == 0) {
+
+        let is_dsa_from = false;
+        let is_dsa_to = false;
+
+        // address is dsa address if account_id is not 0
+        let write_dsa_from = "";
+        let write_dsa_to = "";
+
+        let check_dsa;
+
+        if (from_account_id != 0) {
+          is_dsa_from = true;
+          write_dsa_from = "(dsa)";
+          check_dsa = "from a dsa";
+        }
+        if (to_account_id != 0) {
+          is_dsa_to = true;
+          write_dsa_to = "(dsa)";
+          check_dsa = "to a dsa";
+        }
+
+        if (is_dsa_from == false && is_dsa_to == false) {
           continue;
         }
 
@@ -61,16 +82,17 @@ function provideHandleTransaction(amountThreshold) {
 
         const formattedAmount = amount.toFixed(2);
 
+
         findings.push(
           Finding.fromObject({
             name: `Large ${tokens[token].name} Transfer`,
-            description: `${formattedAmount} ${tokens[token].name} Transferred`,
+            description: `${formattedAmount} ${tokens[token].name} transferred ${check_dsa}`,
             alertId: "INST-41",
             severity: FindingSeverity.Info,
             type: FindingType.Info,
             metadata: {
-              from: tokenTransfer.args.from,
-              to: tokenTransfer.args.to,
+              from: from.concat(write_dsa_from),
+              to: to.concat(write_dsa_to),
               amount: formattedAmount,
             },
           })

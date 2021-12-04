@@ -73,12 +73,12 @@ describe("large transfer event agent", () => {
         expect(findings).toStrictEqual([
             Finding.fromObject({
                 name: "Large DAI Transfer",
-                description: `${formattedAmount} DAI Transferred`,
+                description: `${formattedAmount} DAI transferred from a dsa address`,
                 alertId: "INST-41",
                 severity: FindingSeverity.Info,
                 type: FindingType.Info,
                 metadata: {
-                    from: mockDaiTransferEvent.args.from,
+                    from: mockDaiTransferEvent.args.from.concat("(dsa address)"),
                     to: mockDaiTransferEvent.args.to,
                     amount: formattedAmount,
                 },
